@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDFDG</title>
+    <script src="https://kit.fontawesome.com/e78b9798d5.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+        {
+        "imports": {
+         "three": "https://cdn.skypack.dev/three@0.142.0/build/three.module",
+            "three/": "https://cdn.skypack.dev/three@0.142.0/",      
+            "dat.gui": "https://cdn.skypack.dev/dat.gui"
+        }
+       }
+      </script>
+    <link rel="stylesheet" href="unitstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">TDFDG</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/info.html" class="navbar__links">Game Info</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="units.html" class="navbar__links">Units</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="https://cookiecons.itch.io/tdfdg" class="button">PLAY</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!--This is where the three.js content should be-->
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>TRUMPET TURRET</h1>
+                <h2>COST: 100 | DAMAGE: 40</h2>
+                <p>A brass instrument with firepower and tenacity. When upgraded, it can fire up to 4 bullets a second.</p>
+            </div>
+            <!--HERE IS THREE JS STUFF-->
+            <div class="main__three--container" id="main__three--container"></div>
+            <div class="main__content">
+                <h1>OTOMA TURRET</h1>
+                <h2>COST: 300 | DAMAGE: 60</h2>
+                <p>An electronic synthesizer with a large cooldown but powerful AOE damage. It may not seem menacing at first, but the soundwaves that it sends to the ground will surely shock anyway in its radius.</p>
+            </div>
+            <!--HERE IS THREE JS STUFF-->
+            <div class="main__three--container2" id="main__three--container2"></div>
+        </div>
+    </div>
+
+    <!--Footer Section-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/about.html">The Team</a>
+                    <a href="/about.html">About the Game</a>
+                    <a href="/info.html">How to Play</a>
+                </div>
+            </div>
+            <div class="social__media">
+                <div class="social__media--wrap">
+                    <div class="footer__logo">
+                        <a href="/" id="footer__logo"><img src="images/cookielogo.svg" alt="pic" class="cookiefooter" />TDFDG</a>
+                    </div>
+                    <p class="website__right">Copyright ⓒ 2022 Fresh Dope Games, Alex Chau</p>
+                    <div class="social__icons">
+                        <a href="/" class="social__icon--link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="/" class="social__icon--link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js "></script>
+    <!--<script src="js/three.js"></script>-->
+    <script type="module" src="scene.js"></script>
+    <script type="module" src="otomaScene.js"></script>
+</body>
+</html>

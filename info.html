@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDFDG About</title>
+    <script src="https://kit.fontawesome.com/e78b9798d5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="info.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">TDFDG</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/info.html" class="navbar__links">Game Info</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="units.html" class="navbar__links">Units</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="https://cookiecons.itch.io/tdfdg" class="button">PLAY</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="main__container">
+            <div class="movement">
+                <h1>Movement</h1>
+                <p>All camera movement is done using WASD and your mouse scroll wheel. The scroll wheel will adjust the height of the camera.</p>
+            </div>
+            <div class="movement__img">
+                <img src="images/Movement.gif" alt="pic" id="main__img" />
+            </div>
+            <hr class="rounded">
+            <div class="movement" id ="towerplace">
+                <h1>Tower Placement</h1>
+                <p>If you have enough money to purchase a tower, you can click on its card on the top left and click whichever placement pod is available.</p>
+            </div>
+            <div class="movement__img">
+                <img src="images/TowerPlacement.gif" alt="pic" id="main__img" />
+            </div>
+            <hr class="rounded">
+            <div class="movement" id ="upgrades">
+                <h1>Upgrades/Sell</h1>
+                <p>Upgrades can increase your firerate, firepower, and even add special abilities. To upgrade or sell a turret, click on the body of the turret to pop up a UI for these actions.</p>
+            </div>
+            <div class="movement__img">
+                <img src="images/Upgrades.gif" alt="pic" id="main__img" />
+            </div>
+            <hr class="rounded">
+            <div class="movement" id ="pausebattle">
+                <h1>Music Stoppage</h1>
+                <p>Music Stoppage is a powerful skill that can only be used for a total of 20 seconds while active. When the music is paused using the disc on the left, the enemies lose motivation to keep advancing, but instead begin targeting your turrets. This action buys you time to kill the enemies, but also risks your turrets corroding to the slimes.</p>
+            </div>
+            <div class="movement__img">
+                <img src="images/PauseBattle.gif" alt="pic" id="main__img" />
+            </div>
+            <hr class="rounded">
+            <div class="movement" id ="speakers">
+                <h1>Speakers</h1>
+                <p>The speakers will charge on their own as long as the music keeps going, and will light up green when they are ready to blast. Clicking on the speaker body will emit a shrill of sound that will severely damage and slow enemies in its path.</p>
+            </div>
+            <div class="movement__img">
+                <img src="images/Speaker.gif" alt="pic" id="main__img" />
+            </div>
+        </div>
+    </div>
+
+    <!--Footer Section-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/about.html">The Team</a>
+                    <a href="/about.html">About the Game</a>
+                    <a href="/info.html">How to Play</a>
+                </div>
+            </div>
+            <div class="social__media">
+                <div class="social__media--wrap">
+                    <div class="footer__logo">
+                        <a href="/" id="footer__logo"><img src="images/cookielogo.svg" alt="pic" class="cookiefooter" />TDFDG</a>
+                    </div>
+                    <p class="website__right">Copyright ⓒ 2022 Fresh Dope Games, Alex Chau</p>
+                    <div class="social__icons">
+                        <a href="/" class="social__icon--link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="/" class="social__icon--link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js "></script>
+</body>
+</html>
