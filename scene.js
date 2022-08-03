@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0x141414 );
@@ -16,7 +16,7 @@ const light = new THREE.AmbientLight( 0xffffff, 0.7 );
 light.position.set(1, 2, 1);
 scene.add( light );
 var model;
-loader.load( 'models/Trumpet Cannon.gltf', function ( gltf ) {
+loader.load( '/models/Trumpet Cannon.gltf', function ( gltf ) {
 
 	scene.add( gltf.scene );
     model = gltf.scene;
