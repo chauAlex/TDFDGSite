@@ -1,35 +1,60 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import {updateSplineTexture} from "three/examples/jsm/modifiers/CurveModifier";
 
+const scene = new THREE.Scene();
+scene.background = new THREE.Color( 0x141414 );
 const SIZEADJ = 2.5;
-const otomaScene = new THREE.Scene();
-const otomaCamera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const otomaRenderer = new THREE.WebGLRenderer();
-otomaRenderer.setSize( window.innerWidth/SIZEADJ, window.innerHeight/SIZEADJ );
-$('#main__three--container2').appendChild( otomaRenderer.domElement );
+const renderer = new THREE.WebGLRenderer({antialias: false});
+renderer.setSize( window.innerWidth/SIZEADJ, window.innerHeight/SIZEADJ );
+renderer.setPixelRatio(window.devicePixelRatio);
+$('#main__three--container2').appendChild( renderer.domElement );
 
-const geometry2 = new THREE.BoxGeometry( 1, 1, 1 );
-const material2 = new THREE.MeshBasicMaterial( { color: 0x809C46 } );
-const cube2 = new THREE.Mesh( geometry2, material2 );
-otomaScene.add( cube2 );
+const loader = new GLTFLoader();
+const controls = new OrbitControls( camera, renderer.domElement );
 
-otomaCamera.position.z = 5;
+const light = new THREE.AmbientLight( 0xffffff, 0.7 );
+light.position.set(1, 2, 1);
+scene.add( light );
 
-function animateOtoma() {
-	requestAnimationFrame( animateOtoma );
-	otomaRenderer.render( otomaScene, otomaCamera );
+const dirlight = new THREE.DirectionalLight( 0xffffff, 0.7 );
+light.position.set(1, 2, 1);
+scene.add( dirlight );
+var model;
+loader.load( '/models/Cube Cannon.gltf', function ( gltf ) {
 
-    cube2.rotation.y += 0.01;
+    scene.add( gltf.scene );
+    model = gltf.scene;
+
+}, undefined, function ( error ) {
+
+    console.error( error );
+
+} );
+
+camera.position.x = -0.25;
+camera.position.z = 1.9;
+controls.update();
+
+function animate() {
+    requestAnimationFrame( animate );
+    renderer.render( scene, camera );
+    model.rotation.y += 0.01;
+    controls.update();
+    //cube.rotation.y += 0.01;
 }
-animateOtoma();
+animate();
 
-window.addEventListener( 'resize', onWindowResizeOtoma, false );
+window.addEventListener( 'resize', onWindowResize, false );
 
-function onWindowResizeOtoma(){
+function onWindowResize(){
 
-    otomaCamera.aspect = window.innerWidth / window.innerHeight;
-    otomaCamera.updateProjectionMatrix();
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
-    otomaRenderer.setSize( window.innerWidth/SIZEADJ, window.innerHeight/SIZEADJ );
+    renderer.setSize( window.innerWidth/SIZEADJ, window.innerHeight/SIZEADJ );
 
 }

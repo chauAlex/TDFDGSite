@@ -218,6 +218,14 @@
     padding: 0 50px;
 }
 
+.rounded {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-top: 8px solid #e1f5c4;
+    border-radius: 5px;
+    padding: 50px 0;
+}
+
 .main__content h1 {
     font-size: 2rem;
     background-color: #ff8177;
@@ -247,7 +255,7 @@
     color: #fff;
 }
 
-.main__three--containter {
+.main__three--container {
     align-items:center;
     justify-self: center;
 }
