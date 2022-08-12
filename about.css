@@ -209,7 +209,7 @@
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 150vh;
+    height: 200vh;
     background-color: #141414;
     z-index: 1;
     width: 100%;
@@ -275,6 +275,40 @@
 }
 
 .whoweare__alex__img img{
+    height: 80%;
+    width: 80%;
+}
+
+.whoweare__fab h1 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb177 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.whoweare__fab h2 {
+    font-size: 3rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.whoweare__fab p {
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.whoweare__fab__img img{
     height: 80%;
     width: 80%;
 }
